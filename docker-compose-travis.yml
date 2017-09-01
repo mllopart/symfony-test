@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+
+  db:
+    container_name: php_db_mysql
+    image: mysql
+    env_file: .env
+
+  php:
+    container_name: php_php
+    build:
+      context: .
+      dockerfile: ./compose/php/Dockerfile
+    expose:
+        - "9000"
+    volumes:
+        - ./template_project:/var/www/symfony
+        - ./logs/symfony:/var/www/symfony/app/logs
+    links:
+        - db
+
+  nginx:
+    container_name: php_nginx
+    build: ./compose/nginx
+    ports:
+        - "80:80"
+    links:
+        - php
+    volumes_from:
+        - php
+    volumes:
+        - ./logs/nginx/:/var/log/nginx
+
+  elk:
+    container_name: php_elk
+    image: willdurand/elk
+    ports:
+        - "81:80"
+    volumes:
+        - ./compose/elk/logstash:/etc/logstash
+        - ./compose/elk/logstash/patterns:/opt/logstash/patterns
+    volumes_from:
+        - php
+        - nginx
