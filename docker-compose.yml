@@ -3,26 +3,27 @@ version: '2'
 services:
 
   db:
+    container_name: php_db_mysql
     image: mysql
     ports:
         - "3306:3306"
-    environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: symfony
-        MYSQL_USER: symfony
-        MYSQL_PASSWORD: symfony
+    env_file: .env
 
   php:
-    build: ./compose/php
+    container_name: php_php
+    build:
+      context: .
+      dockerfile: ./compose/php/Dockerfile
     expose:
         - "9000"
     volumes:
-        - ./symfony:/var/www/symfony
+        - ./template_project:/var/www/symfony
         - ./logs/symfony:/var/www/symfony/app/logs
     links:
         - db
 
   nginx:
+    container_name: php_nginx
     build: ./compose/nginx
     ports:
         - "80:80"
@@ -34,6 +35,7 @@ services:
         - ./logs/nginx/:/var/log/nginx
 
   elk:
+    container_name: php_elk
     image: willdurand/elk
     ports:
         - "81:80"

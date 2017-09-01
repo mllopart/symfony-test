@@ -29,10 +29,12 @@ RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
 RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x /usr/bin/composer
 
-ADD symfony.ini /etc/php5/fpm/conf.d/
-ADD symfony.ini /etc/php5/cli/conf.d/
+ADD ./compose/php/symfony.ini /etc/php5/fpm/conf.d/
+ADD ./compose/php/symfony.ini /etc/php5/cli/conf.d/
 
-ADD symfony.pool.conf /etc/php5/fpm.d/
+ADD ./compose/php/symfony.pool.conf /etc/php5/fpm.d/
+
+COPY ./template_project /var/www/symfony
 
 CMD ["php-fpm", "-F"]
 
