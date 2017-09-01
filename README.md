@@ -1,7 +1,7 @@
 symfony-docker-template
 =======================
 
-[![Build Status](https://secure.travis-ci.org/eko/docker-symfony.png?branch=master)](http://travis-ci.org/eko/docker-symfony)
+[![Build Status](https://secure.travis-ci.org/mllopart/symfony-docker-template.svg?branch=master)](http://travis-ci.org/mllopart/symfony-docker-template)
 
 [![pipeline status](https://gitlab.com/larsnow/symfony-docker-template/badges/master/pipeline.svg)](https://gitlab.com/larsnow/symfony-docker-template/commits/master)
 
