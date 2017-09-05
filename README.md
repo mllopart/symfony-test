@@ -1,13 +1,11 @@
 symfony-docker-template
 =======================
 
-[![Build Status](https://secure.travis-ci.org/mllopart/symfony-docker-template.svg?branch=master)](http://travis-ci.org/mllopart/symfony-docker-template)
+[![Build Status](https://secure.travis-ci.org/mllopart/symfony-test.svg?branch=master)](http://travis-ci.org/mllopart/symfony-test)
 
-[![pipeline status](https://gitlab.com/larsnow/symfony-docker-template/badges/master/pipeline.svg)](https://gitlab.com/larsnow/symfony-docker-template/commits/master)
+[![pipeline status](https://gitlab.com/larsnow/symfony-test/badges/master/pipeline.svg)](https://gitlab.com/larsnow/symfony-test/commits/master)
 
 Basic Symfony Docker project to start your own one.
-
-Inspired in https://github.com/eko/docker-symfony
 
 # Installation
 

@@ -1,7 +1,24 @@
-#symfony
+### symfony ###
 /symfony
+/.web-server-pid
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
 
-# Logs
+### Logs ###
 logs
 *.log
 pip-log.txt
@@ -14,14 +31,13 @@ npm-debug.log*
 .LSOverride
 
 ### SublimeText ###
-# cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
 
 #workspace files are user-specific
-*.sublime-workspace
+.sublime-workspace
 
 # project files should be checked into the repository, unless a significant
 # proportion of contributors will probably not be using SublimeText
-*.sublime-project
+.sublime-project

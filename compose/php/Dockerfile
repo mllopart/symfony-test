@@ -34,9 +34,14 @@ ADD ./compose/php/symfony.ini /etc/php5/cli/conf.d/
 
 ADD ./compose/php/symfony.pool.conf /etc/php5/fpm.d/
 
-COPY ./template_project /var/www/symfony
+COPY ./autotrader /var/www/symfony
+
+WORKDIR /var/www/symfony
+
+RUN composer -n install --dev
+RUN composer update
 
 CMD ["php-fpm", "-F"]
 
-WORKDIR /var/www/symfony
+
 EXPOSE 9000

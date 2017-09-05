@@ -15,7 +15,7 @@ services:
     expose:
         - "9000"
     volumes:
-        - ./template_project:/var/www/symfony
+        - ./autotrader:/var/www/symfony
         - ./logs/symfony:/var/www/symfony/app/logs
     links:
         - db
