@@ -1,22 +1,22 @@
 ### symfony ###
-/symfony
-/.web-server-pid
-/app/config/parameters.yml
-/build/
-/phpunit.xml
-/var/*
-!/var/cache
-/var/cache/*
-!var/cache/.gitkeep
-!/var/logs
-/var/logs/*
-!var/logs/.gitkeep
-!/var/sessions
-/var/sessions/*
-!var/sessions/.gitkeep
-!var/SymfonyRequirements.php
-/vendor/
-/web/bundles/
+/autotrader/symfony
+/autotrader/.web-server-pid
+/autotrader/app/config/parameters.yml
+/autotrader/build/
+/autotrader/phpunit.xml
+/autotrader/var/*
+!/autotrader/var/cache
+/autotrader/var/cache/*
+!autotrader/var/cache/.gitkeep
+!/autotrader/var/logs
+/autotrader/var/logs/*
+!autotrader/var/logs/.gitkeep
+!/autotrader/var/sessions
+/autotrader/var/sessions/*
+!autotrader/var/sessions/.gitkeep
+!autotrader/var/SymfonyRequirements.php
+/autotrader/vendor/
+/autotrader/web/bundles/
 
 ### Logs ###
 logs
