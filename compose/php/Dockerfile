@@ -33,9 +33,9 @@ COPY ./autotrader /var/www/symfony
 
 WORKDIR /var/www/symfony
 
-RUN composer clearcache
-RUN composer install
-RUN composer update
+#RUN composer clearcache
+#RUN composer install
+#RUN composer update
 
 ADD ./compose/php/symfony.ini /etc/php5/fpm/conf.d/
 ADD ./compose/php/symfony.ini /etc/php5/cli/conf.d/
