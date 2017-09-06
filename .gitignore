@@ -15,7 +15,6 @@
 /autotrader/var/sessions/*
 !autotrader/var/sessions/.gitkeep
 !autotrader/var/SymfonyRequirements.php
-/autotrader/vendor/
 /autotrader/web/bundles/
 
 ### Logs ###

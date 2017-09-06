@@ -43,3 +43,12 @@ services:
     volumes_from:
         - php
         - nginx
+
+  phpmyadmin:
+    container_name: sy_php_myadmin
+    image: phpmyadmin/phpmyadmin
+    links:
+        - db
+    ports:
+        - "8181:80"
+    env_file: .env
