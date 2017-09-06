@@ -3,12 +3,12 @@ version: '2'
 services:
 
   db:
-    container_name: php_db_mysql
+    container_name: sy_php_db_mysql
     image: mysql
     env_file: .env
 
   php:
-    container_name: php_php
+    container_name: sy_php_php
     build:
       context: .
       dockerfile: ./compose/php/Dockerfile
@@ -21,7 +21,7 @@ services:
         - db
 
   nginx:
-    container_name: php_nginx
+    container_name: sy_php_nginx
     build: ./compose/nginx
     ports:
         - "80:80"
@@ -33,7 +33,7 @@ services:
         - ./logs/nginx/:/var/log/nginx
 
   elk:
-    container_name: php_elk
+    container_name: sy_php_elk
     image: willdurand/elk
     ports:
         - "81:80"

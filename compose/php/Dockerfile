@@ -38,7 +38,7 @@ COPY ./autotrader /var/www/symfony
 
 WORKDIR /var/www/symfony
 
-RUN composer -n install --dev
+RUN composer install
 RUN composer update
 
 CMD ["php-fpm", "-F"]
